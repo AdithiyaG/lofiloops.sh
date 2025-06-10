@@ -1,6 +1,6 @@
 
 const Constants = {
-    TOTAL_GIFS: 20,
+    TOTAL_GIFS: 24,
     GIF_KEYBORD_SWITCH: 'g',
 };
 
