@@ -1,0 +1,26 @@
+{
+  "name": "lofiloops.sh",
+  "version": "0.0.1",
+  "description": "mindpeacefully streams lofi songs on loop, best fit while you work, study and code. soothing and engaging",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "lofi",
+    "simple",
+    "minimalistic",
+    "songs",
+    "coding",
+    "vibe",
+    "coding"
+  ],
+  "author": "Sounish Nath <flock.sinasini@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "tailwindcss": "^4.1.8"
+  }
+}
