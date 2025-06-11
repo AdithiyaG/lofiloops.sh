@@ -1,5 +1,5 @@
 # Build stage
-FROM node:22-alpine --platform linux/amd64 AS builder
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # Build stage is complete, now we'll use Nginx to serve the files
-FROM nginx:alpine --platform linux/amd64
+FROM nginx:alpine
 
 # Copy the built files from builder stage to Nginx
 COPY --from=builder /app/src /usr/share/nginx/html
