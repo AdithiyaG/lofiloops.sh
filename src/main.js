@@ -1720,7 +1720,8 @@ const Constants = {
 
 let player;
 const videos = Constants.LofiSongsSuggestions.items.map(item => item.id.videoId);
-let currentVideoIndex = Math.floor(Math.random() * videos.length) + 1 ;
+let currentVideoIndex = Math.floor(Math.random() * videos.length) + 1;
+let gifChangeTimer = null;
 
 // Load YouTube IFrame API
 function loadYouTubeAPI() {
@@ -1767,6 +1768,7 @@ function onPlayerStateChange(event) {
     // When video ends, play next video
     if (event.data === YT.PlayerState.ENDED) {
         playNextVideo();
+        randomizeGifWall(); // Change GIF when song changes
     } else if (event.data === YT.PlayerState.PAUSED) {
         // Show play icon when paused
         const playIcon = document.getElementById('playIcon');
@@ -1859,6 +1861,9 @@ async function handleKeyPress(event) {
 async function main() {
     console.log(`i am running from main.js script`);
     await randomizeGifWall();
+
+    // Set up 5-minute timer for GIF changes
+    gifChangeTimer = setInterval(randomizeGifWall, 5 * 60 * 1000); // 5 minutes in milliseconds
 
     loadYouTubeAPI();
 
