@@ -1,5 +1,5 @@
 GIT_COMMIT_HASH=$$(git rev-parse --short HEAD)
-DockerImage=asia-south1-docker.pkg.dev/sounish-cloud-workstation/sounish-cloud-workstation/lofiloops.sh
+DockerImage=asia-south1-docker.pkg.dev/sounish-cloud-workstation/sounish-cloud-workstation/lofiloops
 
 .PHONY: build-docker-img
 build-docker-img:
@@ -16,8 +16,8 @@ build-docker-img:
 .PHONY: deploy
 deploy: build-docker-img
 	echo "Deploying the latest docker image to Google cloud run"
-	gcloud run deploy lofiloops.sh \
-	--image=$(DockerImageName):$(GIT_COMMIT_HASH) \
+	gcloud run deploy lofiloops \
+	--image="$(DockerImageName):$(GIT_COMMIT_HASH)" \
 	--allow-unauthenticated \
 	--port=80 \
 	--service-account=797087556919-compute@developer.gserviceaccount.com \
