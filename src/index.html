@@ -23,8 +23,8 @@
         <div class="flex flex-col items-center gap-6 z-10">
             <!-- Song Info -->
             <div
-                class="text-2xl font-light tracking-wide blur-[0.6px] filter drop-shadow-[0_0_8px_rgba(236,72,153,0.5)] hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]">
-                <span id="songTitle">Lal Ishq <span>...</span></span>
+                class="text-2xl font-light tracking-wide blur-[0.6px] filter drop-shadow-[0_0_8px_rgba(236,72,153,0.5)] hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)] max-w-[80vw] truncate">
+                <span id="songTitle">Loading <span>...</span></span>
             </div>
 
             <!-- Control Buttons -->
@@ -39,12 +39,19 @@
                 </button>
                 <button id="playBtn"
                     class="hover:text-pink-500/80 transition-colors filter drop-shadow-[0_0_8px_rgba(236,72,153,0.5)] hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)] blur-[0.6px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
+                    <!-- Play Icon -->
+                    <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                             d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                             d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <!-- Pause Icon -->
+                    <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 hidden" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </button>
                 <button id="stopBtn"
@@ -66,6 +73,12 @@
                     </svg>
                 </button>
             </div>
+
+            <iframe id="youtubePlayer" width="0" height="0"
+                src="https://www.youtube.com/embed/ZZHI5el8cDg?enablejsapi=1&autoplay=1&mute=0&controls=0&showinfo=0&rel=0&modestbranding=1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             <!-- Volume Slider -->
             <div class="flex items-center gap-3 w-48">
@@ -94,8 +107,8 @@
                         <kbd
                             class="px-2 py-1 text-sm font-semibold text-gray-200 bg-gray-800/50 border border-gray-700 rounded filter drop-shadow-[0_0_8px_rgba(236,72,153,0.5)] hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)] blur-[0.6px]">Space</kbd>
                         <span
-                            class="text-gray-200/80 filter drop-shadow-[0_0_8px_rgba(236,72,153,0.5)] hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)] blur-[0.6px]">Play
-                            / Pause</span>
+                            class="text-gray-200/80 filter drop-shadow-[0_0_8px_rgba(236,72,153,0.5)] hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)] blur-[0.6px]">Pause
+                            / Play</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <kbd
