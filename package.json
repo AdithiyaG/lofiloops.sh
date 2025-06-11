@@ -22,5 +22,8 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.8",
     "tailwindcss": "^4.1.8"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
