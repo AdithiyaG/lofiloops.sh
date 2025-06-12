@@ -1,5 +1,5 @@
 const Constants = {
-    TOTAL_GIFS: 24,
+    TOTAL_GIFS: 29,
     GIF_KEYBORD_SWITCH: 'g',
     PLAY_PAUSE_KEYBORD_SWITCH: ' ',
     PREV_KEYBORD_SWITCH: 'arrowleft',
