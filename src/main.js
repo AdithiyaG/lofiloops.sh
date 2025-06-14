@@ -3559,7 +3559,6 @@ async function handleKeyPress(event) {
 }
 
 async function main() {
-    console.log(`i am running from main.js script`);
     await randomizeGifWall();
 
     // Set up 5-minute timer for GIF changes
@@ -3589,6 +3588,6 @@ async function main() {
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
     // Execute the script ...
-    main().then(() => console.log('loading essentials...')).catch(console.error);
+    main().then(() => {}).catch(console.error);
 });
 
