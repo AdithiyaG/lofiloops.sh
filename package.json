@@ -4,7 +4,8 @@
   "description": "mindpeacefully streams lofi songs on loop, best fit while you work, study and code. soothing and engaging",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tailwind:watch" : "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "dev": "npx http-server src"
   },
   "keywords": [
     "javascript",

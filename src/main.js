@@ -3420,7 +3420,7 @@ const Constants = {
 
 let player;
 const videos = Constants.LofiSongsSuggestions.items.map(item => item.id.videoId);
-let currentVideoIndex = Math.floor(Math.random() * videos.length) + 1;
+let currentVideoIndex = Math.floor(Math.random() * videos.length);
 let gifChangeTimer = null;
 
 // Load YouTube IFrame API
