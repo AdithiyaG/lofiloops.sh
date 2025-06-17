@@ -31,6 +31,13 @@
     <meta name="robots" content="index, follow">
 
     <link href="output.css" rel="stylesheet">
+    <style>
+        .station-card.active {
+            background-color: rgba(236, 72, 153, 0.2) !important;
+            border-color: rgba(236, 72, 153, 0.5) !important;
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+        }
+    </style>
 </head>
 
 <body>
@@ -45,6 +52,7 @@
             <a href=""
                 class="text-4xl tracking-wide font-light hover:text-pink-500/80 transition-colors blur-[0.7px] filter drop-shadow-[0_0_8px_rgba(236,72,153,0.5)] hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]">lofiloop.sh</a>
         </div>
+
         <!-- Player Controls -->
         <div class="flex flex-col items-center gap-6 z-10">
             <!-- Song Info -->
@@ -119,6 +127,19 @@
                     id="volumeSlider">
             </div>
 
+            <!-- Radio Stations -->
+            <div class="mb-8 z-10">
+                <div class="text-center mb-4">
+                    <h2
+                        class="text-xl font-light tracking-wide blur-[0.6px] filter drop-shadow-[0_0_8px_rgba(236,72,153,0.5)] hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]">
+                        Choose Your Station</h2>
+                </div>
+                <div id="stationsContainer" class="flex gap-4 justify-center flex-wrap max-w-4xl mx-auto px-4">
+                    <!-- Station cards will be dynamically generated here -->
+                </div>
+            </div>
+
+
             <div
                 class="text-sm text-gray-200/80 tracking-wide filter drop-shadow-[0_0_8px_rgba(236,72,153,0.5)] hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)] blur-[0.6px]">
                 your peaceful companion for focused work, study, and
@@ -181,6 +202,7 @@
                 </div>
             </div>
 
+            <script src="stations.js" defer></script>
             <script src="main.js" defer></script>
 </body>
 
